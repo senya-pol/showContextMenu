@@ -8,6 +8,7 @@ Information specific to NV Access add-on store [can be found here](https://githu
 Copyright (C) 2012-2025 NVDA Add-on team contributors.
 
 This package is distributed under the terms of the GNU General Public License, version 2 or later. Please see the file COPYING.txt for further details.
+License: GPL-2.0-or-later
 
 [alekssamos](https://github.com/alekssamos/) added automatic package of add-ons through Github Actions.
 
@@ -158,3 +159,4 @@ Read the documentation for the tools you wish to use when building and developin
 Note that this template only provides a basic add-on structure and build infrastructure. You may need to adapt it for your specific needs such as using additional tools.
 
 If you have any issues please use the NVDA addon list mentioned above.
+
