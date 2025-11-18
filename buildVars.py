@@ -66,7 +66,7 @@ Supported browsers include Chrome, Edge, Opera, Brave, Vivaldi, and other Chromi
 	# Do not change unless you know what you are doing!
 	addon_updateChannel=None,
 	# Add-on license such as GPL 2
-	addon_license="GPL v2",
+	addon_license="GPL-2.0-or-later",
 	# URL for the license document the ad-on is licensed under
 	addon_licenseURL="https://www.gnu.org/licenses/gpl-2.0.html",
 )
@@ -121,4 +121,5 @@ brailleTables: BrailleTables = {}
 # displayName (name of the speech dictionary shown to users and translatable),
 # mandatory (True when always enabled, False when not.
 symbolDictionaries: SymbolDictionaries = {}
+
 
