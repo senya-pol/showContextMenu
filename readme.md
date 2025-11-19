@@ -27,5 +27,3 @@
 * **Author:** Arseniy Polyakov <senya-pol@yandex-team.ru>  
 * **License:** GPL-2.0-or-later ([link](https://www.gnu.org/licenses/gpl-2.0.html))  
 * **Source:** [GitHub repository](https://github.com/senya-pol/showContextMenu)  
-* **Documentation:** `readme.html`  
-
