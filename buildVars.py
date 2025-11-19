@@ -40,7 +40,7 @@ addon_info = AddonInfo(
 	addon_description=_("""This add-on allows you to show context menus for focused elements in Chromium-based browsers.
 It works specifically with elements that have custom context menus available through the IAccessibleAction interface.
 Use NVDA+Shift+F10 or NVDA+Applications key to trigger the context menu for the element under NVDA's focus.
-Supported browsers include Chrome, Edge, Opera, Brave, Vivaldi, and other Chromium-based browsers."""),
+Supported browsers include Yandex, Chrome, Edge, Opera, Brave, Vivaldi, and other Chromium-based browsers."""),
 	# version
 	addon_version="1.0",
 	# Brief changelog for this version

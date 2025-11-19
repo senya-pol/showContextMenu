@@ -1,6 +1,6 @@
 # ShowContextMenu NVDA Add-on
 
-**ShowContextMenu** allows you to open context menus for focused elements in Chromium-based browsers, including Chrome, Yandex, Edge, and others.
+**ShowContextMenu** allows you to open context menus for focused elements in Chromium-based browsers, including Yandex, Chrome, Edge, and others.
 
 ## Features
 
