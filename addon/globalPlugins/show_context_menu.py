@@ -23,7 +23,6 @@ addonHandler.initTranslation()
 
 import globalPluginHandler
 import api
-import ui
 from scriptHandler import script
 import inputCore
 
@@ -55,14 +54,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 
 		# Try to open context menu using IAccessibleAction
-		if self._openContextMenuViaAction(navObj):
-			# Context menu opened successfully via IAccessibleAction
-			ui.message(_("Image context menu opened"))
-		else:
+		if not self._openContextMenuViaAction(navObj):
 			# If IAccessibleAction failed, pass the gesture to the default Windows handler
 			# This will trigger the standard Shift+F10 behavior
 			gesture.send()
-
 
 	def _isInBrowser(self, obj=None):
 		"""Check if the current application is a web browser"""
