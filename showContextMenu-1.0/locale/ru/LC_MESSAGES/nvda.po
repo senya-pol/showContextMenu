@@ -1,0 +1,37 @@
+# Russian translations for ShowContextMenu NVDA Add-on
+# Copyright (C) 2024 Arseniy Polyakov
+# This file is distributed under the same license as the ShowContextMenu add-on.
+# FIRST AUTHOR <senya-pol@yandex-team.ru>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ShowContextMenu 1.0\n"
+"Report-Msgid-Bugs-To: senya-pol@yandex-team.ru\n"
+"POT-Creation-Date: 2025-11-19 12:00+0000\n"
+"PO-Revision-Date: 2025-11-19 12:00+0000\n"
+"Last-Translator: Arseniy Polyakov <senya-pol@yandex-team.ru>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Add-on summary/title
+msgid "Show Context Menu"
+msgstr "Показать контекстное меню"
+
+# Add-on description
+msgid "This add-on allows you to show context menus for focused elements in Chromium-based browsers.\nIt works specifically with elements that have custom context menus available through the IAccessibleAction interface.\nUse NVDA+Shift+F10 or NVDA+Applications key to trigger the context menu for the element under NVDA's focus.\nSupported browsers include Chrome, Edge, Opera, Brave, Vivaldi, and other Chromium-based browsers."
+msgstr "Этот плагин позволяет показывать контекстные меню для выделенных элементов в браузерах на базе Chromium.\nОн работает специально с элементами, у которых есть собственное контекстное меню через интерфейс IAccessibleAction.\nИспользуйте сочетания NVDA+Shift+F10 или NVDA+Клавиша приложений для вызова контекстного меню для элемента под фокусом NVDA.\nПоддерживаются браузеры: Chrome, Edge, Opera, Brave, Vivaldi и другие браузеры на базе Chromium."
+
+# Add-on changelog
+msgid "Initial release:\n- Added support for showing context menus in Chromium-based browsers\n- Works with elements that have custom context menus\n- Keyboard shortcuts: NVDA+Shift+F10 or NVDA+Applications key"
+msgstr "Первый выпуск:\n- Добавлена поддержка отображения контекстных меню в браузерах на базе Chromium\n- Работает с элементами, у которых есть собственное контекстное меню\n- Горячие клавиши: NVDA+Shift+F10 или NVDA+Клавиша приложений"
+
+# Script description
+msgid "Show context menu for focused item in browser"
+msgstr "Показать контекстное меню для выделенного элемента в браузере"
+
+# UI message
+msgid "Image context menu opened"
+msgstr "Контекстное меню изображения открыто"
