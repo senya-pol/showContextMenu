@@ -1,6 +1,6 @@
 # ShowContextMenu NVDA Add-on
 
-**ShowContextMenu** allows you to open context menus for focused elements in Chromium-based browsers, including Chrome, Edge, Opera, Brave, and Vivaldi.
+**ShowContextMenu** allows you to open context menus for focused elements in Chromium-based browsers, including Chrome, Yandex, Edge, and others.
 
 ## Features
 
@@ -28,3 +28,4 @@
 * **License:** GPL-2.0-or-later ([link](https://www.gnu.org/licenses/gpl-2.0.html))  
 * **Source:** [GitHub repository](https://github.com/senya-pol/showContextMenu)  
 * **Documentation:** `readme.html`  
+
