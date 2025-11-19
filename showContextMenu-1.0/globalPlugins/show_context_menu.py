@@ -18,6 +18,9 @@
 # Show Context Menu Plugin for NVDA
 # This plugin show context menu for items which have in browsers using NVDA+Shift+F10 or NVDA+VP_APPS
 
+import addonHandler
+addonHandler.initTranslation()
+
 import globalPluginHandler
 import api
 import ui
@@ -26,9 +29,10 @@ from scriptHandler import script
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):	
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
-	
+
+	# Translators: Description of the command that opens a context menu for focused browser elements.
 	@script(
-		description="Show context menu for focused item in browser",
+		description=_("Show context menu for focused item in browser"),
 		gestures=("kb:NVDA+shift+f10", "kb:NVDA+applications"),
 	)
 	def script_openImageContextMenu(self, gesture):
@@ -51,7 +55,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Try to open context menu using IAccessibleAction
 		if self._openContextMenuViaAction(navObj):
 			# Context menu opened successfully via IAccessibleAction
-			ui.message("Image context menu opened")
+			ui.message(_("Image context menu opened"))
 		else:
 			# If IAccessibleAction failed, pass the gesture to the default Windows handler
 			# This will trigger the standard Shift+F10 behavior
@@ -130,3 +134,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return False
 		except:
 			return False
+
