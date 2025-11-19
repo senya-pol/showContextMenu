@@ -1,5 +1,6 @@
 # ShowContextMenu NVDA Add-on
 # Copyright (C) 2024 Arseniy Polyakov
+# Copyright (C) 2025 Nikita Tseykovets
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -22,6 +23,7 @@ import addonHandler
 addonHandler.initTranslation()
 
 import globalPluginHandler
+import controlTypes
 import api
 from scriptHandler import script
 import inputCore
@@ -47,18 +49,38 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			gesture.send()
 			return
 
-		# Check if we're in a browser (check based on navigator object's app)
-		if not self._isInBrowser(navObj):
-			# Not in browser, pass to default handler
+		# Check if we're on web content (check based on role of navigator object's parent)
+		if not self._isWebContent(navObj):
+			# If it is not web content, pass the gesture to the default Windows handler
+			# This will trigger the standard Shift+F10 behavior
 			gesture.send()
 			return
 
 		# Try to open context menu using IAccessibleAction
 		if not self._openContextMenuViaAction(navObj):
 			# If IAccessibleAction failed, pass the gesture to the default Windows handler
-			# This will trigger the standard Shift+F10 behavior
 			gesture.send()
 
+	def _isWebContent(self, obj=None):
+		"""Check if the object is a web content element"""
+		# Get the current object (if not passed)
+		if obj is None:
+			obj = api.getNavigatorObject()
+			if not obj:
+				return False
+
+		# Move up the parental hierarchy
+		current = obj
+		while current and current.parent != current:  # Protection against cycles
+			# If the document's parent container is found, it is browse mode
+			if (current.role is controlTypes.Role.DOCUMENT
+				or current.role is controlTypes.Role.INTERNALFRAME):
+				return True
+			current = current.parent
+
+		return False
+
+	# This is a deprecated method
 	def _isInBrowser(self, obj=None):
 		"""Check if the current application is a web browser"""
 		try:
@@ -127,8 +149,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 						except:
 							continue
 
-
 			return False
 		except:
 			return False
-
