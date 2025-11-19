@@ -26,7 +26,7 @@ import api
 import ui
 from scriptHandler import script
 
-class GlobalPlugin(globalPluginHandler.GlobalPlugin):	
+class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
 
@@ -37,7 +37,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_openImageContextMenu(self, gesture):
 		"""Open context menu for the focused image element"""
-		
+
 		# Get the navigator object (the object NVDA is currently reading/navigating)
 		# This is different from system focus - it's the object under NVDA's review cursor
 		navObj = api.getNavigatorObject()
@@ -45,13 +45,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# No navigator object, pass to default handler
 			gesture.send()
 			return
-		
+
 		# Check if we're in a browser (check based on navigator object's app)
 		if not self._isInBrowser(navObj):
 			# Not in browser, pass to default handler
 			gesture.send()
 			return
-		
+
 		# Try to open context menu using IAccessibleAction
 		if self._openContextMenuViaAction(navObj):
 			# Context menu opened successfully via IAccessibleAction
@@ -61,7 +61,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# This will trigger the standard Shift+F10 behavior
 			gesture.send()
 
-	
+
 	def _isInBrowser(self, obj=None):
 		"""Check if the current application is a web browser"""
 		try:
@@ -72,10 +72,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				app = api.getFocusObject().appModule
 			if not app:
 				return False
-			
+
 			# Get the application name
 			appName = app.appName.lower() if app.appName else ""
-			
+
 			# List of common browser application names
 			browserNames = [
 				"chrome", "msedge", "edge", "opera", 
@@ -83,12 +83,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				"browser"
 			]
 			# Debug line removed for production
-			
+
 			# Check if current app is a browser
 			for browser in browserNames:
 				if browser in appName:
 					return True
-			
+
 			# Also check the process name
 			try:
 				processName = app.processName.lower() if hasattr(app, 'processName') else ""
@@ -97,30 +97,30 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 						return True
 			except:
 				pass
-			
+
 			return False
 		except:
 			return False
-	
+
 	def _openContextMenuViaAction(self, obj):
 		"""Try to open context menu using IAccessibleAction interface"""
-		try:			
+		try:
 			# Try to get the IAccessibleAction interface
 			if hasattr(obj, 'IAccessibleActionObject'):
 				action = obj.IAccessibleActionObject
 				if action:
 					# Get the number of actions
 					nActions = action.nActions()
-					
+
 					# Validate nActions
 					if nActions is None or not isinstance(nActions, int) or nActions <= 0:
 						return False
-					
+
 					# Look for context menu action directly without debug output
 					for i in range(nActions):
 						try:
 							# Get action name using the same method that worked above
-							actionName = action.name(i)							
+							actionName = action.name(i)
 							if actionName and actionName == 'showContextMenu':
 								try:
 									action.doAction(i)
@@ -129,8 +129,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 									pass
 						except:
 							continue
-			
-			
+
+
 			return False
 		except:
 			return False
