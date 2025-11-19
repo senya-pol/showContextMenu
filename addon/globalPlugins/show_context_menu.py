@@ -25,6 +25,7 @@ import globalPluginHandler
 import api
 import ui
 from scriptHandler import script
+import inputCore
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
@@ -33,6 +34,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Description of the command that opens a context menu for focused browser elements.
 	@script(
 		description=_("Show context menu for focused item in browser"),
+		category=inputCore.SCRCAT_BROWSEMODE,
 		gestures=("kb:NVDA+shift+f10", "kb:NVDA+applications"),
 	)
 	def script_openImageContextMenu(self, gesture):
