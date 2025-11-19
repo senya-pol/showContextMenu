@@ -22,7 +22,7 @@ msgstr "Показать контекстное меню"
 
 # Add-on description
 msgid "This add-on allows you to show context menus for focused elements in Chromium-based browsers.\nIt works specifically with elements that have custom context menus available through the IAccessibleAction interface.\nUse NVDA+Shift+F10 or NVDA+Applications key to trigger the context menu for the element under NVDA's focus.\nSupported browsers include Yandex, Chrome, Edge, Opera, Brave, Vivaldi, and other Chromium-based browsers."
-msgstr "Этот плагин позволяет показывать контекстные меню для выделенных элементов в браузерах на базе Chromium.\nОн работает специально с элементами, у которых есть собственное контекстное меню через интерфейс IAccessibleAction.\nИспользуйте сочетания NVDA+Shift+F10 или NVDA+Applications для вызова контекстного меню для элемента под фокусом NVDA.\nПоддерживаются браузеры: Yandex, Chrome, Edge, Opera, Brave, Vivaldi и другие браузеры на базе Chromium."
+msgstr "Этот плагин добавляет возможность вызывать контекстные меню для выделенных элементов в браузерах на базе Chromium.\nОн работает с элементами, которые поддерживают вызов собственного контекстного меню через механизм IAccessibleAction.\nЧтобы открыть меню для элемента, на котором находится фокус NVDA, используйте комбинации клавиш NVDA+Shift+F10 или NVDA+Applications.\nПлагин поддерживает следующие браузеры: Яндекс Браузер, Google Chrome, Microsoft Edge, Opera, Brave, Vivaldi и другие на движке Chromium."
 
 # Add-on changelog
 msgid "Initial release:\n- Added support for showing context menus in Chromium-based browsers\n- Works with elements that have custom context menus\n- Keyboard shortcuts: NVDA+Shift+F10 or NVDA+Applications key"
