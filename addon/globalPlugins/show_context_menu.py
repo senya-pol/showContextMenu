@@ -1,6 +1,6 @@
 # ShowContextMenu NVDA Add-on
-# Copyright (C) 2024 Arseniy Polyakov
-# Copyright (C) 2025 Nikita Tseykovets
+# Copyright (C) 2025 Arseniy Polyakov <senya-pol@yandex-team.ru>
+# Copyright (C) 2025 Nikita Tseykovets <tseykovets@yandex-team.ru>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,10 +15,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.
 
-# -*- coding: utf-8 -*-
-# Show Context Menu Plugin for NVDA
-# This plugin show context menu for items which have in browsers using NVDA+Shift+F10 or NVDA+VP_APPS
-
 import addonHandler
 addonHandler.initTranslation()
 
@@ -32,27 +28,32 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
 
-	# Translators: Description of the command that opens a context menu for focused browser elements.
 	@script(
-		description=_("Show context menu for focused item in browser"),
+		description=_(
+			# Translators: Description of the command that opens a context menu for a current web content element.
+			"Shows context menu for current web content element"
+		),
 		category=inputCore.SCRCAT_BROWSEMODE,
-		gestures=("kb:NVDA+shift+f10", "kb:NVDA+applications"),
+		gestures=(
+			"kb:NVDA+shift+f10",
+			"kb:NVDA+applications"
+		),
 	)
-	def script_openImageContextMenu(self, gesture):
-		"""Open context menu for the focused image element"""
+	def script_showContextMenu(self, gesture):
+		"""Show context menu for current web content element"""
 
 		# Get the navigator object (the object NVDA is currently reading/navigating)
 		# This is different from system focus - it's the object under NVDA's review cursor
 		navObj = api.getNavigatorObject()
 		if not navObj:
-			# No navigator object, pass to default handler
+			# If no navigator object, pass the gesture to the default Windows handler
+			# This will trigger the standard Shift+F10 behavior
 			gesture.send()
 			return
 
 		# Check if we're on web content (check based on role of navigator object's parent)
 		if not self._isWebContent(navObj):
 			# If it is not web content, pass the gesture to the default Windows handler
-			# This will trigger the standard Shift+F10 behavior
 			gesture.send()
 			return
 
@@ -72,7 +73,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Move up the parental hierarchy
 		current = obj
 		while current and current.parent != current:  # Protection against cycles
-			# If the document's parent container is found, it is browse mode
+			# If the parent container is document, it is browse mode
 			if (current.role is controlTypes.Role.DOCUMENT
 				or current.role is controlTypes.Role.INTERNALFRAME):
 				return True
