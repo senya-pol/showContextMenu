@@ -50,17 +50,17 @@ Supported browsers include Chrome, Edge, Opera, Brave, Vivaldi, and other Chromi
 - Works with elements that have custom context menus
 - Keyboard shortcuts: NVDA+Shift+F10 or NVDA+Applications key"""),
 	# Author(s)
-	addon_author="Your Name <your.email@example.com>",
+	addon_author="Arseniy Polyakov <senya-pol@yandex-team.ru>",
 	# URL for the add-on documentation support
-	addon_url="https://github.com/yourusername/showContextMenu",
+	addon_url="https://github.com/senya-pol/showContextMenu",
 	# URL for the add-on repository where the source code can be found
-	addon_sourceURL="https://github.com/yourusername/showContextMenu",
+	addon_sourceURL="https://github.com/senya-pol/showContextMenu",
 	# Documentation file name
 	addon_docFileName="readme.html",
 	# Minimum NVDA version supported (e.g. "2019.3.0", minor version is optional)
 	addon_minimumNVDAVersion="2019.3",
 	# Last NVDA version supported/tested (e.g. "2024.4.0", ideally more recent than minimum version)
-	addon_lastTestedNVDAVersion="2024.4",
+	addon_lastTestedNVDAVersion="2025.3",
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
@@ -121,5 +121,6 @@ brailleTables: BrailleTables = {}
 # displayName (name of the speech dictionary shown to users and translatable),
 # mandatory (True when always enabled, False when not.
 symbolDictionaries: SymbolDictionaries = {}
+
 
 
