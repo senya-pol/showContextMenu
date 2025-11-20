@@ -1,5 +1,5 @@
 # ShowContextMenu NVDA Add-on
-# Copyright (C) 2024 Arseniy Polyakov
+# Copyright (C) 2025 Arseniy Polyakov <senya-pol@yandex-team.ru>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -37,9 +37,9 @@ addon_info = AddonInfo(
 	addon_summary=_("Show Context Menu"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-on store
-	addon_description=_("""This add-on allows you to show context menus for focused elements in Chromium-based browsers.
+	addon_description=_("""This add-on allows you to show context menus for current web content elements in browse mode even when they cannot be focused using the keyboard.
 It works specifically with elements that have custom context menus available through the IAccessibleAction interface.
-Use NVDA+Shift+F10 or NVDA+Applications key to trigger the context menu for the element under NVDA's focus.
+Use NVDA+Shift+F10 or NVDA+Applications key to trigger the context menu for the element under NVDA's focus in browse mode.
 Supported browsers include Yandex, Chrome, Edge, Opera, Brave, Vivaldi, and other Chromium-based browsers."""),
 	# version
 	addon_version="1.0",

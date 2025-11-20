@@ -1,37 +1,73 @@
 # Russian translations for ShowContextMenu NVDA Add-on
-# Copyright (C) 2024 Arseniy Polyakov
+# Copyright (C) 2025 Arseniy Polyakov
 # This file is distributed under the same license as the ShowContextMenu add-on.
 # FIRST AUTHOR <senya-pol@yandex-team.ru>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ShowContextMenu 1.0\n"
-"Report-Msgid-Bugs-To: senya-pol@yandex-team.ru\n"
-"POT-Creation-Date: 2025-11-19 12:00+0000\n"
-"PO-Revision-Date: 2025-11-19 12:00+0000\n"
-"Last-Translator: Arseniy Polyakov <senya-pol@yandex-team.ru>\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2025-11-20 01:02+0300\n"
+"PO-Revision-Date: 2025-11-20 01:05+0300\n"
+"Last-Translator: Nikita Tseykovets <tseikovets@rambler.ru>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+# Script description
+#. Translators: Description of the command that opens a context menu for a current web content element.
+#: addon\globalPlugins\show_context_menu.py:34
+msgid "Shows context menu for current web content element"
+msgstr "Показывает контекстное меню для текущего элемента веб-контента"
 
 # Add-on summary/title
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
+#: buildVars.py:37
 msgid "Show Context Menu"
 msgstr "Показать контекстное меню"
 
 # Add-on description
-msgid "This add-on allows you to show context menus for focused elements in Chromium-based browsers.\nIt works specifically with elements that have custom context menus available through the IAccessibleAction interface.\nUse NVDA+Shift+F10 or NVDA+Applications key to trigger the context menu for the element under NVDA's focus.\nSupported browsers include Yandex, Chrome, Edge, Opera, Brave, Vivaldi, and other Chromium-based browsers."
-msgstr "Этот плагин добавляет возможность вызывать контекстные меню для выделенных элементов в браузерах на базе Chromium.\nОн работает с элементами, которые поддерживают вызов собственного контекстного меню через механизм IAccessibleAction.\nЧтобы открыть меню для элемента, на котором находится фокус NVDA, используйте комбинации клавиш NVDA+Shift+F10 или NVDA+Applications.\nПлагин поддерживает следующие браузеры: Яндекс Браузер, Google Chrome, Microsoft Edge, Opera, Brave, Vivaldi и другие на движке Chromium."
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
+#: buildVars.py:40
+msgid ""
+"This add-on allows you to show context menus for current web content "
+"elements in browse mode even when they cannot be focused using the "
+"keyboard.\n"
+"It works specifically with elements that have custom context menus available "
+"through the IAccessibleAction interface.\n"
+"Use NVDA+Shift+F10 or NVDA+Applications key to trigger the context menu for "
+"the element under NVDA's focus in browse mode.\n"
+"Supported browsers include Yandex, Chrome, Edge, Opera, Brave, Vivaldi, and "
+"other Chromium-based browsers."
+msgstr ""
+"Это дополнение позволяет отображать контекстные меню для текущих элементов "
+"веб-контента в режиме обзора, даже если их невозможно сфокусировать с "
+"помощью клавиатуры.\n"
+"Оно работает с элементами, которые поддерживают вызов собственного "
+"контекстного меню через механизм IAccessibleAction.\n"
+"Чтобы открыть меню для элемента, на котором находится фокус NVDA в режиме "
+"обзора, используйте комбинации клавиш NVDA+Shift+F10 или NVDA+Applications.\n"
+"Дополнение поддерживает следующие браузеры: Яндекс Браузер, Google Chrome, "
+"Microsoft Edge, Opera, Brave, Vivaldi и другие на движке Chromium."
 
 # Add-on changelog
-msgid "Initial release:\n- Added support for showing context menus in Chromium-based browsers\n- Works with elements that have custom context menus\n- Keyboard shortcuts: NVDA+Shift+F10 or NVDA+Applications key"
-msgstr "Первый выпуск:\n- Добавлена поддержка отображения контекстных меню в браузерах на базе Chromium\n- Работает с элементами, у которых есть собственное контекстное меню\n- Горячие клавиши: NVDA+Shift+F10 или NVDA+Applications"
-
-# Script description
-msgid "Show context menu for focused item in browser"
-msgstr "Показать контекстное меню для выделенного элемента в браузере"
-
-# UI message
-msgid "Image context menu opened"
-msgstr "Контекстное меню изображения открыто"
+#. Brief changelog for this version
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:48
+msgid ""
+"Initial release:\n"
+"- Added support for showing context menus in Chromium-based browsers\n"
+"- Works with elements that have custom context menus\n"
+"- Keyboard shortcuts: NVDA+Shift+F10 or NVDA+Applications key"
+msgstr ""
+"Первый выпуск:\n"
+"- Добавлена поддержка отображения контекстных меню в браузерах на базе "
+"Chromium\n"
+"- Работает с элементами, у которых есть собственное контекстное меню\n"
+"- Горячие клавиши: NVDA+Shift+F10 или NVDA+Applications"

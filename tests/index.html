@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ShowContextMenu Test</title>
+</head>
+<body>
+<h1>ShowContextMenu Test</h1>
+<p>This is a manual test to check the functionality of the ShowContextMenu add-on.</p>
+<h2>Preconditions</h2>
+<ul>
+<li>NVDA is running on the system.</li>
+<li>The ShowContextMenu add-on is installed in NVDA.</li>
+</ul>
+<h2>Steps</h2>
+<ol>
+<li>Open this HTML file in target browser.</li>
+<li>Go to the section titled "Test Rig".</li>
+<li>Set system focus to the "Test Link" link using the Tab key.</li>
+<li>Set the NVDA cursor to the "Test Image" image using the arrow keys or the G key.</li>
+<li>Make sure system focus remains on the link using NVDA+Tab command.</li>
+<li>Press the command of ShowContextMenu add-on (NVDA+Shift+F10 or NVDA+Application key).</li>
+<li>Examine the context menu items.</li>
+</ol>
+<h2>Expected Result</h2>
+<ul>
+<li>The context menu for the image opens. It should contain items like "Copy image address" or something similar.</li>
+</ul>
+<h2>Test Rig</h2>
+<p><a href="https://en.wikipedia.org/wiki/File:Randolph_Caldecott_illustration2.jpg" target="_blank">Test Link</a></p>
+<p>The following image is in the public domain.</p>
+<p><img src="image.jpg" alt="Test Image"></p>
+</body>
+</html>
