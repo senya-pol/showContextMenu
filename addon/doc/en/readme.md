@@ -8,7 +8,7 @@
 * Opens context menus using keyboard shortcuts:
 	+ **NVDA+Shift+F10**
 	+ **NVDA+Applications key**
-* Tested with NVDA 2019.3 and later (up to 2025.3).
+* Tested with NVDA 2019.3 and later (up to 2026.1).
 
 ## Installation
 
@@ -24,7 +24,7 @@
 
 ## Add-on Information
 
-* **Version:** 1.0  
+* **Version:** 1.2  
 * **Author:** Arseniy Polyakov <senya-pol@yandex-team.ru>  
 * **License:** GPL-2.0-or-later ([link](https://www.gnu.org/licenses/gpl-2.0.html))  
 * **Source:** [GitHub repository](https://github.com/senya-pol/showContextMenu)  

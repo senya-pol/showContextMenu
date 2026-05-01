@@ -42,13 +42,15 @@ It works specifically with elements that have custom context menus available thr
 Use NVDA+Shift+F10 or NVDA+Applications key to trigger the context menu for the element under NVDA's focus in browse mode.
 Supported browsers include Yandex, Chrome, Edge, Opera, Brave, Vivaldi, and other Chromium-based browsers."""),
 	# version
-	addon_version="1.0",
+	addon_version="1.2",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""Initial release:
-- Added support for showing context menus in Chromium-based browsers
-- Works with elements that have custom context menus
-- Keyboard shortcuts: NVDA+Shift+F10 or NVDA+Applications key"""),
+	addon_changelog=_("""1.2:
+- Compatible with NVDA 2026.1
+- A more robust mechanism for detecting web interfaces
+- Add-on gesture is now in the Browse mode category
+- Updating documentation
+- Full Russian localization with documentation"""),
 	# Author(s)
 	addon_author="Arseniy Polyakov <senya-pol@yandex-team.ru>",
 	# URL for the add-on documentation support
@@ -60,7 +62,7 @@ Supported browsers include Yandex, Chrome, Edge, Opera, Brave, Vivaldi, and othe
 	# Minimum NVDA version supported (e.g. "2019.3.0", minor version is optional)
 	addon_minimumNVDAVersion="2019.3",
 	# Last NVDA version supported/tested (e.g. "2024.4.0", ideally more recent than minimum version)
-	addon_lastTestedNVDAVersion="2025.3",
+	addon_lastTestedNVDAVersion="2026.1",
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
